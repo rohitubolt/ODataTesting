@@ -1,0 +1,17 @@
+version: '3.4'
+
+#networks:
+#  dockernetwork:
+
+services:
+  dockerdemo:
+    container_name: dockerdemo
+    ports:
+     - 80:80
+    image: ${DOCKER_REGISTRY-}dockerdemo
+    build:
+      context: .
+      dockerfile: DockerDemo/Dockerfile
+    #networks:
+    # - dockernetwork
+       
